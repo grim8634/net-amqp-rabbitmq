@@ -1,8 +1,15 @@
 #!/bin/bash
 
+#Tell bash to exit none 0 on failing command
+set -e
+
 . "$(dirname $0)/util.sh"
 
 if [ $is_osx ]; then
+    #perlbrew install perl-"$TRAVIS_PERL_VERSION"
+    perl -v
+    perlbrew use perl-"$TRAVIS_PERL_VERSION"
+    perl -v
     brew install cpanminus
 fi
 

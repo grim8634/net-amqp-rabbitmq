@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Tell bash to exit none 0 on failing command
+set -e
+
 . "$(dirname $0)/util.sh"
 
 #osx doesn't have a local rabbitmq service
