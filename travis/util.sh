@@ -1,7 +1,5 @@
 if which brew 2> /dev/null; then
     is_osx=true
-    #install perl brew
-    curl -L https://install.perlbrew.pl | bash
 else
     is_osx=false
 fi
